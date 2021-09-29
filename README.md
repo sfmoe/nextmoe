@@ -1,6 +1,6 @@
 # NEXTMOE
 
-[![Moe Martinez, Front End Dev and Photographer from Chicago] (https://raw.githubusercontent.com/sfmoe/nextmoe/main/screenshot.png)]
+[![Moe Martinez, Front End Dev and Photographer from Chicago](https://raw.githubusercontent.com/sfmoe/nextmoe/main/screenshot.png)]
 
 
 ## This portfolio is being built with Next.js and Contentful
