@@ -6,27 +6,29 @@ export default function Contact(){
       }, []);
 
     return (
-<div class="contact-form">
-    <form name="form1" id="ff" method="post" action="https://formspree.io/f/mgerdqnr">
+        <div className="content">
+            <div className="contact-form">
+                <form name="form1" id="ff" method="post" action="https://formspree.io/f/mgerdqnr">
 
-    <label>
-        <span>Name*:</span>
-        <input placeholder="Please enter your name" name="name" id="name" required="" type="text" />
-    </label>
+                <label>
+                    <span>Name*:</span>
+                    <input placeholder="Please enter your name" name="name" id="name" required="" type="text" />
+                </label>
 
-    <label>
-        <span>Email*:</span>
-        <input placeholder="youremail@email.com" name="email" id="email" required="" type="email" />
-    </label>
+                <label>
+                    <span>Email*:</span>
+                    <input placeholder="youremail@email.com" name="email" id="email" required="" type="email" />
+                </label>
 
-    <label>
-        <span>Message*</span>
-        <textarea id="message" name="message" required=""></textarea>
-    </label>
+                <label>
+                    <span>Message*</span>
+                    <textarea id="message" name="message" required=""></textarea>
+                </label>
 
-        <input class="sendButton" name="Submit" value="Send" type="submit" />
-    </form>
-    <div class="form-status">&nbsp;</div>
+                    <input className="sendButton" name="Submit" value="Send" type="submit" />
+                </form>
+                <div className="form-status">&nbsp;</div>
+            </div>
 </div>
     );
 };

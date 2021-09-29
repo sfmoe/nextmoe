@@ -1,6 +1,14 @@
 import Navbar from "./navbar"
 import Link from "next/link"
+
 export default function Header(){
+
+
+    const menuHandler = (status)=>{
+       const burger = document.querySelector("#burger");
+       burger.checked = false;
+    };
+
         return (
             <header>
                 <h1><Link href="/"><a><span>Moe Martinez</span></a></Link></h1>
@@ -12,7 +20,7 @@ export default function Header(){
                     <span></span>
                     <span></span>
                 </label>
-                        <Navbar />
+                        <Navbar menuStateChanger={menuHandler}/>
             </header> 
         );
 }
