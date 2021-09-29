@@ -48,6 +48,12 @@ div.homepage .home-copy .button {
   width: 10rem;
   margin-top: 1rem;
 }
+
+div.homepage footer{
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
 @media only screen and (max-width: 800px) {
   div.homepage {
     grid-template-rows: 140px 300px auto auto;

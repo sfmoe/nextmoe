@@ -22,13 +22,13 @@ a {
 body {
   font-family: "Helvetica";
   text-align: left;
-  padding: 0 0 60px 0;
+  padding: 0 0 0 0;
   margin: 0;
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
 }
-body#__next > header {
-  padding: 20px 40px 40px 40px;
+body #__next > header {
+  padding: 1.5rem;
 }
 header > input,
 header > label {
@@ -126,6 +126,7 @@ header nav#menu ul li a:focus {
   max-width: 500px;
   margin: 0 auto;
   position: relative;
+  padding-bottom: 40px;
 }
 .contact-form form {
   display: block;
