@@ -1,20 +1,48 @@
-const publicFolder = "/assets/portfolio/";
+import contentfulApi from "@utils/ContentfulApi";
+import styles from '@styles/image.module.css';
 
-export function getStaticProps(context) {
-    const { port, image } = context.params
-    console.log(context.params)
-    return {
-      props: {image: image, port: port}, // will be passed to the page component as props
-    }
-  }
 
-export const getStaticPaths = () => {
-    return {
-        paths: [], //indicates that no page needs be created at build time
-        fallback: 'blocking' //indicates the type of fallback
-    }
+export default function Image(props){
+    const currentImage = props.currentImage[0];
+ 
+    return (
+    <div className={styles.single__image}>
+      <img src={currentImage.url} />
+    </div>
+    )
 }
 
-export default function Images({image, port}){
-    return <div className="solo-image"><img src={`${publicFolder}${port}/${image}`}/></div>
+export const getStaticPaths = () => {
+  
+  return {
+      paths: [],
+      fallback: 'blocking'
+  }
+}
+
+export const getStaticProps = async ({params})=> {
+
+  const {port, image} = params;
+  const portfolioImages = await contentfulApi.getPortfolio(port); 
+
+  if(!portfolioImages.length)  {
+    return {
+      notFound: true,
+    };
+  }
+  let currentImage = getSingleImage(portfolioImages, image);
+  if(!currentImage.length)  {
+    return {
+      notFound: true,
+    };
+  }
+  return {
+      props: {currentImage}
+  };
+}
+
+export const getSingleImage = (port, imageId)=>{
+  return port.filter(item=>{
+      return item.sys.id == imageId;
+  });
 }

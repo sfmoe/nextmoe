@@ -1,0 +1,10 @@
+.single__image {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.single__image img {
+    max-width: 100%;
+}

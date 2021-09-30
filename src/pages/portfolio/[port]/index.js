@@ -10,12 +10,12 @@ import contentfulApi from "@utils/ContentfulApi";
 /* setup modal */
 Modal.setAppElement("#__next");
 
-const PortfolioPage = ({allImages, port})=>{
-
-  const [modalOpen, setmodalOpen] = useState(false);
+const PortfolioPage = (props)=>{
+  const {allImages, port} = props
   const router = useRouter();
 
-  const toggleModal = ()=>{
+  const [modalOpen, setmodalOpen] = useState(false);
+  const toggleModal = (e)=>{
     modalOpen ? setmodalOpen(false) : setmodalOpen(true);
   };
 
@@ -23,8 +23,6 @@ const PortfolioPage = ({allImages, port})=>{
     document.querySelector("#__next").className = "portfolio"; 
     (router.query.SingleImage) ? setmodalOpen(true) : setmodalOpen(false);
   }, []);
-
-  
 
   return (
     <>
@@ -34,7 +32,7 @@ const PortfolioPage = ({allImages, port})=>{
     <div className={`${styles.gallery} gallery`}>
     {allImages.map(image=>{
        return (
-         <Link key={image.sys.id} href={image.url} >
+         <Link key={image.sys.id} href={`./${port}?imageID=${image.sys.id}`} as={`/image/${port}/${image.sys.id}`} replace={false}>
           <a>
             <img src={`${image.url}?w=300`}  alt={image.name} /> 
         </a>
@@ -42,33 +40,48 @@ const PortfolioPage = ({allImages, port})=>{
     )
     })}
     </div>
-    <Modal className="gallery-overlay-body" overlayClassName="gallery-overlay" isOpen={modalOpen}>
+    <Modal className="gallery-overlay-body" overlayClassName="gallery-overlay" 
+    isOpen={false}
+    onRequestClose={() => router.push(`./${port}`)}
+    contentLabel="Post modal">
     <span className="close" onClick={toggleModal}></span>
     <span className="prev"></span>
     <span className="next"></span>
-    <img src={`${router.query.location}/${router.query.SingleImage}`}/>
+    <img src={`/${router.query.imageID}`}/>
     </Modal>
     </>
   )
 };
 
-
-
-export const getStaticProps = async (context)=> {
-  const { port } = context.params;
-  const images = await contentfulApi.getPortfolio(port);
-
+export const getStaticPaths = async () => {
+  
   return {
-    props: {allImages: images, port: context.params.port}, // will be passed to the page component as props
+      paths: [],
+      fallback: 'blocking'
   }
 }
 
-export const getStaticPaths = () => {
-  return {
-      paths: [], //indicates that no page needs be created at build time
-      fallback: 'blocking' //indicates the type of fallback
-  }
-}
 
+export const getStaticProps = async ({params})=> {
+  const port = params.port;
+
+  const allPortfolios = await contentfulApi.getAllPortfolioNames();
+
+  let checkPortfolio = allPortfolios.map(port=>{return  port.portfolioTitle}).includes(port);
+
+  if(!checkPortfolio)  {
+      return {
+        notFound: true,
+      };
+  }else{
+
+    const images = await contentfulApi.getPortfolio(port);
+
+      return {
+      props: {allImages: images, port: port}, // will be passed to the page component as props
+    }
+
+}
+}
 
 export default PortfolioPage;
