@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./header/header";
-import Footer from "./footer/footer";
+import Header from "./header/Header";
+import Footer from "./footer/Footer";
 import Script from 'next/script';               
 
-class Navbar extends React.Component {
+class Layout extends React.Component {
     render() {
         return(
         <>
@@ -19,4 +19,4 @@ class Navbar extends React.Component {
 }
 
 
-export default Navbar
+export default Layout;

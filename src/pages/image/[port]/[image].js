@@ -1,14 +1,12 @@
 import contentfulApi from "@utils/ContentfulApi";
 import styles from '@styles/image.module.css';
-
+import SingleImage from '@components/gallery/SingleImage';
 
 export default function Image(props){
     const currentImage = props.currentImage[0];
  
     return (
-    <div className={styles.single__image}>
-      <img src={currentImage.url} />
-    </div>
+      <SingleImage styles={styles} currentImage={currentImage} />
     )
 }
 
