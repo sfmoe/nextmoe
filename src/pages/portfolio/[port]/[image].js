@@ -1,6 +1,6 @@
 import contentfulApi from "@utils/ContentfulApi";
 import styles from '@styles/image.module.css';
-import SingleImage from '@components/gallery/SingleImage';
+import SingleImage from '@components/gallery/singleImage';
 
 export default function Image(props){
     const currentImage = props.currentImage[0];

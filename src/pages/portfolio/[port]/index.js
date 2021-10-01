@@ -2,7 +2,6 @@ import styles from '@styles/gallery.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import contentfulApi from "@utils/ContentfulApi";
 
 
