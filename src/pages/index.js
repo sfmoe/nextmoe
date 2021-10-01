@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import React, { useEffect, useRef } from 'react';
 import contentfulApi from '@utils/ContentfulApi';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
