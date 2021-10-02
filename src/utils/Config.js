@@ -25,6 +25,10 @@ export const Config = {
             page: "About",
             path: "/about"
         },
+        // {
+        //     page: "Presets",
+        //     path: "/presets"
+        // },
         {
             page: "Contact",
             path: "/contact"
