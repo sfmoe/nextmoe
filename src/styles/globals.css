@@ -435,3 +435,7 @@ button:active,
 .image-in-page{
   text-align: center;
 }
+
+.image-in-page img {
+  max-width: 100%;
+}
