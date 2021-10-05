@@ -9,6 +9,9 @@ export const Config = {
     },
     menuLinks: [
         {
+            page: "Dev",
+            path: "/development"
+        },        {
             page: "Location",
             path: "/portfolio/location"
         },
