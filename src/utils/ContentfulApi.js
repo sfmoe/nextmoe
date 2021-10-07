@@ -45,6 +45,7 @@ export default class contentfulApi {
                   url
                   width
                   height
+                  description
                 }
               }
             }

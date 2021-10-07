@@ -67,7 +67,7 @@ export default function Home({allImages, pageContent}) {
       </div>
     </section>
     
-    <section className="home-copy">
+    <section id="main" className="home-copy">
     {documentToReactComponents(pageContent.pageContent.json)}
     </section>
 

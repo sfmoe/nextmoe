@@ -6,7 +6,7 @@ export default function Contact(){
       }, []);
 
     return (
-        <div className="content">
+        <div id="main" className="content">
             <div className="contact-form">
                 <form name="form1" id="ff" method="post" action="https://formspree.io/f/mgerdqnr">
 

@@ -19,12 +19,12 @@ const PortfolioPage = (props)=>{
     <title>Moe Martinez | {port.replace(port.charAt(0), port.charAt(0).toUpperCase())} Portfolio | Photographer - Web Developer</title>   
     </Head>
  
-    <div className={`${styles.gallery} gallery`}>
+    <div id="main" className={`${styles.gallery} gallery`}>
     {allImages.map(image=>{
        return (
          <Link key={image.sys.id} href={`/portfolio/${port}/${image.sys.id}`}>
           <a>
-            <img src={`${image.url}?w=300`}  alt={image.name} /> 
+            <img src={`${image.url}?w=300`}  alt={`thumbnail for ${image.title}`} /> 
           </a>
         </Link>  
     )

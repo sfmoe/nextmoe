@@ -439,3 +439,15 @@ button:active,
 .image-in-page img {
   max-width: 100%;
 }
+
+
+#skip_to_main {
+  height: 0;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+#skip_to_main:focus {
+  height: auto;
+}

@@ -11,7 +11,7 @@ export default function Development({pageContent}){
 
 
     return(
-        <div className="content">
+        <div id="main" className="content">
             <section>
         {documentToReactComponents(pageContent.pageContent.json, renderOption(pageContent.pageContent))}
             </section>
