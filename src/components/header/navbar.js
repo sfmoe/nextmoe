@@ -10,7 +10,7 @@ export default function Navbar({menuStateChanger}){
         return (
        <li key={link.page}>
           <Link href={link.path} >
-          <a onClick={()=>menuStateChanger(false)}>{link.page}</a>
+          <a onClick={(e)=>menuStateChanger(e)} className={(link.hasOwnProperty("classes")? link.classes : "")} alt={link.alt}>{link.page}</a>
           </Link>
         </li>
         )

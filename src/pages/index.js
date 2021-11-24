@@ -6,8 +6,6 @@ import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
 
 const loadImages = (homehero, allImages) => {
 
-
-
   let hero = homehero.querySelector(".home-hero");
   let imagesFiltered = allImages.filter(item=>{
       if(window.matchMedia("(max-width: 480px)").matches){
@@ -51,7 +49,7 @@ export default function Home({allImages, pageContent}) {
     document.querySelector("#__next").className = "homepage";
 
     loadImages(heroContainer.current, allImages);
-    rotateImages(heroContainer.current, allImages);
+    rotateImages(heroContainer.current, allImages); 
 
   }, []);
 
@@ -59,12 +57,11 @@ export default function Home({allImages, pageContent}) {
   return (
     <>
       <Head>
-      <title>Moe Martinez | Photographer - Web Developer</title>   
-     </Head>
+        <title>Moe Martinez | Photographer - Web Developer</title>   
+      </Head>
 
     <section className="home-hero-container" ref={heroContainer}>
-      <div className="home-hero">
-      </div>
+      <div className="home-hero"></div>
     </section>
     
     <section id="main" className="home-copy">

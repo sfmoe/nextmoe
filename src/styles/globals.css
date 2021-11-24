@@ -1,13 +1,15 @@
 :root {
   font-size: 16px;
-  --darkest-grey: #666;
+  --darkest-grey: #222;
+  --dark-grey: #444;
   --medium-grey: #555;
-  --light-grey: #444;
+  --light-grey: #777;
+  --lightest-grey: #bbb;
   --white: #f4f4f7;
   --main-bg-color: var(--white);
   --main-text-color: var(--light-grey);
   --main-header-color: var(--medium-grey);
-  --main-anchor-color: var(--darkest-grey);
+  --main-anchor-color: var(--medium-grey);
   --tomato: #ff6347;
 }
 *,
@@ -15,10 +17,21 @@
 *::after {
   box-sizing: border-box;
 }
+html.nightmode{
+  --main-bg-color: var( --darkest-grey);
+  --main-text-color: var(--white);
+  --main-anchor-color: var( --lightest-grey);
+}
+
 a {
   text-decoration: none;
-  color: #666;
+  color: var(--main-anchor-color);
 }
+
+a:hover{
+  text-decoration: underline;
+}
+
 body {
   font-family: "Helvetica";
   text-align: left;
@@ -27,6 +40,7 @@ body {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
 }
+
 body #__next > header {
   padding: 1.5rem;
   max-width: 506px;
@@ -52,9 +66,11 @@ header h1 {
 }
 header h1 a {
   display: inline-block;
+  width: 100%
 }
 header h1 a span {
   display: inline-block;
+  width: 100%;
   padding-left: 124px;
   font-size: 43px;
   height: auto;
@@ -69,6 +85,8 @@ header h1 a span {
 header h1 a span {
     font-size: 20px;
     line-height: 20px;
+    padding-left: 105px;
+    letter-spacing: 2px;
   }
 }
 
@@ -79,15 +97,20 @@ header nav#menu ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(6, minmax( 0, 1fr));
-  gap: .25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
+@media screen and (max-width: 600px) {
+  header nav#menu ul {
+    flex-direction: column
+  }
+  }
 header nav#menu ul li {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 14px;
-  padding: 12px 0;
+  padding: 12px 2px;
   line-height: 20px;
   text-align: center;
 }
@@ -217,7 +240,7 @@ header nav#menu ul li a:focus {
     height: 30px;
     width: 25px;
     z-index: 5;
-    color: var(--darkest-grey);
+    color: var(--dark-grey);
   }
   body header input + label span {
     position: absolute;
@@ -227,7 +250,7 @@ header nav#menu ul li a:focus {
     margin-top: -1px;
     left: 0;
     display: block;
-    background: var(--darkest-grey);
+    background: var(--dark-grey);
     transition: 0.5s;
   }
   body header input + label span:first-child {
@@ -265,7 +288,8 @@ header nav#menu ul li a:focus {
   body header input:checked ~ nav#menu {
     transition-delay: 0s;
     height: auto;
-    background: rgba(255, 255, 255, 0.95);
+    background-color: var(--main-bg-color);
+
     border-radius: 0 0 10px 10px;
     margin-top: 16px;
   }
@@ -297,16 +321,16 @@ button,
   border: 1px solid #ccc;
   padding: 1rem;
   border-radius: 0.5rem;
-  background: #333;
-  color: #ddd;
+  background: var(--dark-grey);
+  color: var(--white);
   text-align: center;
 }
 button:hover,
 .button:hover,
 button:active,
 .button:active {
-  color: #333;
-  background: #ddd;
+  color: var(--dark-grey);
+  background: var(--white);
 }
 
 .about-page .content .profile-image {

@@ -10,23 +10,28 @@ export const Config = {
     menuLinks: [
         {
             page: "Dev",
-            path: "/development"
+            path: "/development",
+            alt: "developer portfolio"
         },        {
             page: "Location",
-            path: "/portfolio/location"
+            path: "/portfolio/location",
+            alt: "location portfolio - images created on location"
         },
         {
             page: "Studio",
-            path: "/portfolio/studio"
+            path: "/portfolio/studio",
+            alt: "studio portfolio - images created in a studio setting"
         },
         {
             page: "Street",
-            path: "/portfolio/street"
+            path: "/portfolio/street",
+            alt: "street portfolio - candid photos shot on the street"
         },
 
         {
             page: "About",
-            path: "/about"
+            path: "/about",
+            alt: "information about Moe Martinez"
         },
         // {
         //     page: "Presets",
@@ -34,7 +39,14 @@ export const Config = {
         // },
         {
             page: "Contact",
-            path: "/contact"
+            path: "/contact",
+            alt: "contact information page"
+        },
+        {
+            page: "🌑",
+            path: "#nightmode",
+            classes: "toggle-nightmode",
+            alt: "turn night mode on and off"
         }
 
     ]
