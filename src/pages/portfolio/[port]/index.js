@@ -60,6 +60,7 @@ export const getStaticProps = async ({params})=> {
 
     return {
       props: {allImages: images, port: port}, // will be passed to the page component as props
+      revalidate: 60,
     }
   }
 }

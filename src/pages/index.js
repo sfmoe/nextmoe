@@ -80,6 +80,7 @@ export const getStaticProps = async ()=> {
   const pageContent = await contentfulApi.getPageContet("Home"); 
 
   return {
-    props: {allImages: images, pageContent: pageContent}
+    props: {allImages: images, pageContent: pageContent},
+    revalidate: 60,
   }
 }

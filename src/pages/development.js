@@ -50,6 +50,7 @@ function renderOption(richTextBodyField){
 export const getStaticProps = async ()=> {
     const page = await contentfulApi.getPageContet("Development"); 
     return {
-        props: {pageContent: page}
+        props: {pageContent: page},
+        revalidate: 60,
     };
 }

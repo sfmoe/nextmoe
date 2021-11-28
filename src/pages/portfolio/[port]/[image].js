@@ -35,7 +35,8 @@ export const getStaticProps = async ({params})=> {
     };
   }
   return {
-      props: {currentImage}
+      props: {currentImage},
+      revalidate: 60,
   };
 }
 
