@@ -472,6 +472,15 @@ button:active,
   display: block;
   overflow: hidden;
   text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-text-color);
+  color: var(--main-bg-color);
+  z-index: 1000000; 
+  line-height: 40px;
+  font-size: 1.5rem;  
 }
 
 #skip_to_main:focus {
