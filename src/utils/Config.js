@@ -23,6 +23,12 @@ export const Config = {
             alt: "studio portfolio - images created in a studio setting"
         },
         {
+            page: "Commercial | Editorial",
+            path: "/portfolio/commercial",
+            alt: "commercial and editorial tear sheets and photos"
+
+        },
+        {
             page: "Street",
             path: "/portfolio/street",
             alt: "street portfolio - candid photos shot on the street"

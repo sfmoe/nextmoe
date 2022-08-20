@@ -45,7 +45,7 @@ body {
 
 body #__next > header {
   padding: 1.5rem;
-  max-width: 506px;
+  width: auto;
 }
 header > input,
 header > label {
@@ -94,6 +94,7 @@ header h1 a span {
 
 header nav#menu {
   display: block;
+  max-width: 700px;
 }
 header nav#menu ul {
   list-style: none;
