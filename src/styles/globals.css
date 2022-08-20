@@ -173,6 +173,7 @@ header nav#menu ul li a:focus {
 .contact-form form label span {
   display: block;
   width: 100%;
+  color: var(--darkest-grey)
 }
 .contact-form form label input,
 .contact-form form label textarea {
