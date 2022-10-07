@@ -23,9 +23,9 @@ export const Config = {
             alt: "studio portfolio - images created in a studio setting"
         },
         {
-            page: "Commercial | Editorial",
-            path: "/portfolio/commercial",
-            alt: "commercial and editorial tear sheets and photos"
+            page: "Tearsheets",
+            path: "/portfolio/tearsheets",
+            alt: "commercial and editorial tearsheets and photos"
 
         },
         {
