@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useEffect } from 'react';
 import contentfulApi from "@utils/ContentfulApi";
+import Image from 'next/image';
 
 
 const PortfolioPage = (props)=>{
@@ -12,20 +13,18 @@ const PortfolioPage = (props)=>{
   useEffect(() => {
     document.querySelector("#__next").className = "portfolio"; 
   }, []);
-
+  const titleText = `Moe Martinez | ${port.replace(port.charAt(0), port.charAt(0).toUpperCase())} Portfolio | Photographer - Web Developer`;
   return (
     <>
     <Head>
-    <title>Moe Martinez | {port.replace(port.charAt(0), port.charAt(0).toUpperCase())} Portfolio | Photographer - Web Developer</title>   
+    <title>{titleText}</title>   
     </Head>
  
     <div id="main" className={`${styles.gallery} gallery`}>
     {allImages.map(image=>{
        return (
          <Link key={image.sys.id} href={`/portfolio/${port}/${image.sys.id}`}>
-          <a>
-            <img src={`${image.url}?w=300`}  alt={`thumbnail for ${image.title}`} /> 
-          </a>
+           <Image src={image.url} alt={`thumbnail for ${image.title}`} width={300} height={250} />  
         </Link>  
     )
     })}

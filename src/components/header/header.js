@@ -31,7 +31,7 @@ export default function Header(){
             <a href="#main" id="skip_to_main"> <span>skip to main</span> </a>
             <header>
                 
-                <h1><Link href="/"><a><span>Moe Martinez</span></a></Link></h1>
+                <h1><Link href="/"><span>Moe Martinez</span></Link></h1>
     
                 <input id="burger" type="checkbox" />
                 
@@ -40,7 +40,7 @@ export default function Header(){
                     <span></span>
                     <span></span>
                 </label>
-                        <Navbar menuStateChanger={menuHandler}/>
+                        <Navbar menuStateChanger={menuHandler} />
             </header> 
             </>
         );

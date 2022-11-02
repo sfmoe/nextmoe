@@ -9,9 +9,11 @@ export default function Navbar({menuStateChanger}){
       {Config.menuLinks.map( link => {
         return (
        <li key={link.page}>
-          <Link href={link.path} >
-          <a onClick={(e)=>menuStateChanger(e)} className={(link.hasOwnProperty("classes")? link.classes : "")} alt={link.alt}>{link.page}</a>
-          </Link>
+        <Link href={link.path} 
+          alt={link.alt} 
+          onClick={(e)=>menuStateChanger(e)} 
+          className={(link.hasOwnProperty("classes")? link.classes : "")}
+          >{link.page}</Link>         
         </li>
         )
       })
