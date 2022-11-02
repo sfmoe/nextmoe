@@ -53,11 +53,11 @@ export default function Home({allImages, pageContent}) {
 
   }, []);
 
-
+  const titleText = "Moe Martinez | Photographer - Web Developer";
   return (
     <>
       <Head>
-        <title>Moe Martinez | Photographer - Web Developer</title>   
+        <title>{titleText}</title>   
       </Head>
 
     <section className="home-hero-container" ref={heroContainer}>
