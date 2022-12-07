@@ -374,6 +374,41 @@ button:active,
   left: -3.5rem;
 }
 
+.about-page .ig-posts{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about-page .ig-posts h3{
+  align-self: normal;
+}
+.about-page .ig-posts a{
+  text-decoration: none;
+}
+.about-page .ig-posts img{
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center top;
+  padding: 0;
+  display: inline
+}
+
+.about-page .ig-post {
+  border: 1px solid var(--light-grey);
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 15px;
+  background-color: var(--light-grey);
+  color: #fff;
+  width: 400px;
+}
+
+.about-page .ig-post span{
+  display: block;
+  padding: 15px;
+}
+
 
 /***
 * Overlay
