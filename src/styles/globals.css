@@ -384,6 +384,7 @@ button:active,
 }
 .about-page .ig-posts a{
   text-decoration: none;
+  max-width: 100%;
 }
 .about-page .ig-posts img{
   width: 100%;
@@ -398,10 +399,11 @@ button:active,
   border: 1px solid var(--light-grey);
   border-radius: 15px;
   overflow: hidden;
-  margin: 15px;
+  margin: 15px 0;
   background-color: var(--light-grey);
   color: #fff;
   width: 400px;
+  max-width: 100%;
 }
 
 .about-page .ig-post span{
