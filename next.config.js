@@ -7,6 +7,12 @@ module.exports = {
         hostname: 'images.ctfassets.net',
         port: '',
         pathname:'/**'
+      },
+      {
+        protocol: 'https',
+        hostname: 'sfmoe.dev',
+        port: '',
+        pathname:'/**'
       }
     ]
   }
