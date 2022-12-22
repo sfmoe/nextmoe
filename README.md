@@ -7,4 +7,4 @@
 
 I am using this as a learning exercise and honestly to have some fun making my site using modern tools.
 
-### The website can be currently found at [test.moemartinez.com](https://test.moemartinez.com)
+### The website can be found at [moemartinez.com](https://moemartinez.com)
