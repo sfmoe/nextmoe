@@ -3,10 +3,22 @@ import React, { useEffect, useRef } from 'react';
 import contentfulApi from '@utils/ContentfulApi';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
+const mouseMove = (e)=>{
 
+    let rect = e.target.getBoundingClientRect(),
+        clientW = e.target.clientWidth,
+        clientH = e.target.clientHeight,
+        clientX =  e.clientX - rect.x,
+        clientY =  e.clientY - rect.y;
+
+        e.target.style.backgroundPosition = `${(clientX/clientW)*100}% ${(clientY/clientH)*100}%`;
+
+
+}
 const loadImages = (homehero, allImages) => {
 
   let hero = homehero.querySelector(".home-hero");
+  hero.removeEventListener("mousemove", mouseMove)
   let imagesFiltered = allImages.filter(item=>{
       if(window.matchMedia("(max-width: 480px)").matches){
         if(item.width < item.height){
@@ -23,18 +35,7 @@ const loadImages = (homehero, allImages) => {
       if(hero){
       hero.style.backgroundPosition = 'left top';
       hero.style.backgroundImage = `url(${randomImage.url})`;
-      
-      hero.addEventListener("mousemove", (e)=>{
-        let rect = hero.getBoundingClientRect(),
-            clientW = e.target.clientWidth,
-            clientH = e.target.clientHeight,
-            clientX =  e.clientX - rect.x,
-            clientY =  e.clientY - rect.y;
-   
-            hero.style.backgroundPosition = `${(clientX/clientW)*100}% ${(clientY/clientH)*100}%`;
-
-      })
-
+      hero.addEventListener("mousemove", mouseMove)
       }
 }
 
