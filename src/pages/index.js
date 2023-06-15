@@ -16,18 +16,18 @@ const mouseMove = (e)=>{
 
 }
 const loadImages = (homehero, allImages) => {
-
   let hero = homehero.querySelector(".home-hero");
   hero.removeEventListener("mousemove", mouseMove)
-  let imagesFiltered = allImages.filter(item=>{
-      if(window.matchMedia("(max-width: 480px)").matches){
-        if(item.width < item.height){
-          return item;
-        }  
-      }else{
-        return item;
-      }
-      });
+  // let imagesFiltered = allImages.filter(item=>{
+  //     if(window.matchMedia("(max-width: 480px)")){
+  //       if(item.width < item.height){
+  //         return item;
+  //       }  
+  //     }else{
+  //       return item;
+  //     }
+  //     });
+  let imagesFiltered = allImages;
  
   let random = Math.floor(Math.random() * imagesFiltered.length);
   let randomImage = imagesFiltered[random];
