@@ -2,7 +2,6 @@ import contentfulApi from "@utils/ContentfulApi";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from "@contentful/rich-text-types";
 import { cloneElement, useEffect } from 'react'
-import Image from "next/image";
 
 
 export default function About(props){

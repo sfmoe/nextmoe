@@ -13,7 +13,7 @@ const PortfolioPage = (props)=>{
   useEffect(() => {
     document.querySelector("#__next").className = "portfolio"; 
   }, []);
-  const titleText = `Moe Martinez | ${port.replace(port.charAt(0), port.charAt(0).toUpperCase())} Portfolio | Photographer - Web Developer`;
+  const titleText = `Moe Martinez | ${port.replace(port.charAt(0), port.charAt(0).toUpperCase())} Portfolio | Photographer`;
   return (
     <>
     <Head>

@@ -5,12 +5,13 @@ import { useEffect } from "react";
 export default function Header(){
 
     const nightModeToggle = () =>{
+       let setDark = localStorage.getItem("darkmode") === 'true';
+       localStorage.setItem("darkmode", !setDark)
        document.querySelector("html").classList.toggle("nightmode");
-       localStorage.getItem("darkmode") || localStorage.setItem("darkmode", false);
     }
 
     const menuHandler = (e)=>{
-        
+        //handle nightmode toggle
         if(e.target.classList.contains("toggle-nightmode")) {
             e.preventDefault();
             nightModeToggle();
@@ -22,8 +23,16 @@ export default function Header(){
     };
 
     useEffect(()=>{
-        let darkmodeStatus = localStorage.getItem("darkmode") || false;
-        (darkmodeStatus)? nightModeToggle() : null;
+       let darkmode = localStorage.getItem("darkmode");
+
+       if(darkmode==null){
+        localStorage.setItem("darkmode", "false");
+        return;
+       }
+
+       if(darkmode == "true"){
+        document.querySelector("html").classList.add("nightmode")
+       }
     }, [])
 
     return (
