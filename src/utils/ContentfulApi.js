@@ -18,6 +18,12 @@ export default class contentfulApi {
       portfoliosCollection(order: [order_ASC]) {
         items {
           portfolioTitle,
+          portfolioImagesCollection(limit:1){
+            items{
+              url,
+              fileName
+            }
+          },
           order
         }
       }
