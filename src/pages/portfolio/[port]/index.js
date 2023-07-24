@@ -58,7 +58,7 @@ export const getStaticProps = async ({params})=> {
     const images = await contentfulApi.getPortfolio(port);
 
     return {
-      props: {allImages: images, port: port}, // will be passed to the page component as props
+      props: {allImages: images, port: port, portfolioMenus:allPortfolios}, // will be passed to the page component as props
       revalidate: 60,
     }
   }

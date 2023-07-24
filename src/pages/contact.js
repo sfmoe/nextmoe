@@ -1,6 +1,8 @@
 import { useEffect } from 'react'
+import contentfulApi from "@utils/ContentfulApi";
 
-export default function Contact(){
+
+export default function Contact(props){
     useEffect(() => {
         document.querySelector("#__next").className = "contact-page";    
       }, []);
@@ -32,3 +34,13 @@ export default function Contact(){
 </div>
     );
 };
+
+
+export const getStaticProps = async ()=> {
+
+    const portfolioMenus = await contentfulApi.getAllPortfolioNames();
+    return {
+        props: { portfolioMenus},
+        revalidate: 60,
+    };
+}

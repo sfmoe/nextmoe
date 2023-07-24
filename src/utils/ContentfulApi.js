@@ -15,9 +15,10 @@ export default class contentfulApi {
   
   static async getAllPortfolioNames(options = defaultOptions){
     const query =`{
-      portfoliosCollection{
+      portfoliosCollection(order: [order_ASC]) {
         items {
-          portfolioTitle
+          portfolioTitle,
+          order
         }
       }
     }`;

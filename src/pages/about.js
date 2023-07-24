@@ -1,10 +1,11 @@
 import contentfulApi from "@utils/ContentfulApi";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS } from "@contentful/rich-text-types";
-import { cloneElement, useEffect } from 'react'
+import { useEffect } from 'react'
 
 
 export default function About(props){
+
     useEffect(() => {
         document.querySelector("#__next").className = "about-page";    
         
@@ -53,8 +54,9 @@ function renderOption(richTextBodyField){
 
 export const getStaticProps = async ()=> {
     const page = await contentfulApi.getPageContet("About"); 
+    const portfolioMenus = await contentfulApi.getAllPortfolioNames();
     return {
-        props: {pageContent: page},
+        props: {pageContent: page, portfolioMenus},
         revalidate: 60,
     };
 }

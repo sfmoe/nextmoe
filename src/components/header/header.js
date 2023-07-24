@@ -2,9 +2,9 @@ import Navbar from "./navbar"
 import Link from "next/link"
 import { useEffect } from "react";
 
-export default function Header(){
-
-    const nightModeToggle = () =>{
+export default function Header(props){
+    const portfolioMenus = props.props.portfolioMenus;
+    const nightModeToggle = () =>{  
        let setDark = localStorage.getItem("darkmode") === 'true';
        localStorage.setItem("darkmode", !setDark)
        document.querySelector("html").classList.toggle("nightmode");
@@ -49,9 +49,8 @@ export default function Header(){
                     <span></span>
                     <span></span>
                 </label>
-                        <Navbar menuStateChanger={menuHandler} />
+                        <Navbar menuStateChanger={menuHandler} portfolioMenus={portfolioMenus}/>
             </header> 
             </>
         );
 }
-

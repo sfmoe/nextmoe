@@ -8,41 +8,38 @@ export const Config = {
         emailUser: "contact@moemartinez.com"
     },
     menuLinks: [
-        {
-            page: "Dev",
-            path: "/development",
-            alt: "developer portfolio"
-        },        {
-            page: "Location",
-            path: "/portfolio/location",
-            alt: "location portfolio - images created on location"
-        },
-        {
-            page: "Studio",
-            path: "/portfolio/studio",
-            alt: "studio portfolio - images created in a studio setting"
-        },
-        {
-            page: "Tearsheets",
-            path: "/portfolio/tearsheets",
-            alt: "commercial and editorial tearsheets and photos"
+        // {
+        //     page: "Dev",
+        //     path: "/development",
+        //     alt: "developer portfolio"
+        // },        
+        // {
+        //     page: "Location",
+        //     path: "/portfolio/location",
+        //     alt: "location portfolio - images created on location"
+        // },
+        // {
+        //     page: "Studio",
+        //     path: "/portfolio/studio",
+        //     alt: "studio portfolio - images created in a studio setting"
+        // },
+        // {
+        //     page: "Tearsheets",
+        //     path: "/portfolio/tearsheets",
+        //     alt: "commercial and editorial tearsheets and photos"
 
-        },
-        {
-            page: "Street",
-            path: "/portfolio/street",
-            alt: "street portfolio - candid photos shot on the street"
-        },
+        // },
+        // {
+        //     page: "Street",
+        //     path: "/portfolio/street",
+        //     alt: "street portfolio - candid photos shot on the street"
+        // },
 
         {
             page: "About",
             path: "/about",
             alt: "information about Moe Martinez"
         },
-        // {
-        //     page: "Presets",
-        //     path: "/presets"
-        // },
         {
             page: "Contact",
             path: "/contact",
