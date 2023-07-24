@@ -5,13 +5,13 @@ module.exports = {
       {
         protocol: 'https',
         hostname: 'images.ctfassets.net',
-        port: '80',
+        port: '',
         pathname:'/**'
       },
       {
         protocol: 'https',
         hostname: 'sfmoe.dev',
-        port: '80',
+        port: '',
         pathname:'/**'
       }
     ]
