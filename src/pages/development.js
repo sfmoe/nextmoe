@@ -49,8 +49,10 @@ function renderOption(richTextBodyField){
 
 export const getStaticProps = async ()=> {
     const page = await contentfulApi.getPageContet("Development"); 
+    const portfolioMenus = await contentfulApi.getAllPortfolioNames();
+
     return {
-        props: {pageContent: page},
+        props: {pageContent: page, portfolioMenus},
         revalidate: 60,
     };
 }

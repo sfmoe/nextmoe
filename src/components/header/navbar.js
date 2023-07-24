@@ -1,12 +1,23 @@
 import Link from "next/link";
 import {Config} from "@utils/Config"
 
-export default function Navbar({menuStateChanger}){
+export default function Navbar({menuStateChanger, portfolioMenus}){
+  let reMenu;
+  if(portfolioMenus){
 
+  reMenu  = portfolioMenus.map( i=>{
+    if(typeof i.order == "number"){
+      return { page: i.portfolioTitle, path:`/portfolio/${i.portfolioTitle}`, alt: `${i.portfolioTitle} portfolio` }
+    }
+  }).filter(e=> typeof e == "object");
+
+  }else{
+    reMenu = [];
+  }
     return (
       <nav id="menu">
     <ul>  
-      {Config.menuLinks.map( link => {
+      {[...reMenu, ...Config.menuLinks].map( link => {
         return (
        <li key={link.page}>
         <Link href={link.path} 

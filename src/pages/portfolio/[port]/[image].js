@@ -22,6 +22,7 @@ export const getStaticProps = async ({params})=> {
 
   const {port, image} = params;
   const portfolioImages = await contentfulApi.getPortfolio(port); 
+  const portfolioMenus = await contentfulApi.getAllPortfolioNames();
 
   if(!portfolioImages.length)  {
     return {
@@ -35,7 +36,7 @@ export const getStaticProps = async ({params})=> {
     };
   }
   return {
-      props: {currentImage},
+      props: {currentImage, portfolioMenus},
       revalidate: 60,
   };
 }

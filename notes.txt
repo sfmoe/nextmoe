@@ -1,1 +1,3 @@
 contact us = look at nodemailer
+
+https://graphql.contentful.com/content/v1/spaces/{CONTENTFUL_SPACE_ID}/explore?access_token={CONTENTFUL_ACCESS_TOKEN}
