@@ -2,17 +2,17 @@ import Link from "next/link";
 import {Config} from "@utils/Config"
 
 export default function Navbar({menuStateChanger, portfolioMenus}){
+  let reMenu;
   if(portfolioMenus){
 
- 
-  const reMenu  = portfolioMenus.map( i=>{
+  reMenu  = portfolioMenus.map( i=>{
     if(typeof i.order == "number"){
       return { page: i.portfolioTitle, path:`/portfolio/${i.portfolioTitle}`, alt: `${i.portfolioTitle} portfolio` }
     }
   }).filter(e=> typeof e == "object");
 
   }else{
-    const reMenu = [];
+    reMenu = [];
   }
     return (
       <nav id="menu">
