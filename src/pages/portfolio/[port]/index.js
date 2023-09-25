@@ -24,7 +24,7 @@ const PortfolioPage = (props)=>{
     {allImages.map(image=>{
        return (
          <Link key={image.sys.id} href={`/portfolio/${port}/${image.sys.id}`}>
-           <Image src={image.url} alt={`thumbnail for ${image.title}`} width={300} height={250} />  
+           <Image src={image.url} alt={`thumbnail for ${image.title}`} width={800} height={800} />  
         </Link>  
     )
     })}
