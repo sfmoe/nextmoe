@@ -40,7 +40,10 @@ export default function Header(props){
             <a href="#main" id="skip_to_main"> <span>skip to main</span> </a>
             <header>
                 
-                <h1><Link href="/"><span>Moe Martinez</span></Link></h1>
+                <h1><Link href="/">
+                    <span>Moe Martinez</span>
+                    <span className="subtitle">Photographer</span>
+                    </Link></h1>
     
                 <input id="burger" type="checkbox" />
                 
