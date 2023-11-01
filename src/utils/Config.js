@@ -3,7 +3,7 @@ const siteURL = "https://moemartinez.com";
 export const Config = {
     site: {
         owner: "Moe Martinez",
-        title: "Front Engineer and Photographer",
+        title: "Chicago Portrait and Headshot Photographer",
         domain: "moemartinez.com",
         emailUser: "contact@moemartinez.com"
     },

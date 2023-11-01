@@ -10,7 +10,7 @@ export default function Home({portfolioMenus}) {
     document.querySelector("#__next").className = "homepage";
   }, []);
 
-  const titleText = "Moe Martinez | Photographerss";
+  const titleText = "Moe Martinez | Chicago Portrait and Headshot Photographer";
   return (
     <>
       <Head>
