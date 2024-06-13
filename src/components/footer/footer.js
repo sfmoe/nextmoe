@@ -7,6 +7,7 @@ export default function Footer(){
                     <a href="https://instagram.com/sfmoe" target="_blank" rel="noreferrer"><i className="fa fa-instagram"></i><span>Instagram @sfmoe</span></a>
                     {/* <a href="https://twitter.com/sfmoe" target="_blank" rel="noreferrer"><i className="fa fa-twitter"></i><span>Twitter @sfmoe</span></a> */}
                     <a href="https://github.com/sfmoe" target="_blank" rel="noreferrer"><i className="fa fa-github"></i><span>Github SFMoe</span></a>
+                    <a rel="me" href="https://mastodon.social/@sfmoe">Mastodon</a>
                 </div>
             </footer>
             </>
