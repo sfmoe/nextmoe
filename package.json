@@ -10,6 +10,11 @@
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.16.2",
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "contentful": "^9.0.0",
     "cross-env": "^7.0.3",
     "eslint-config-next": "^13.0.1",
