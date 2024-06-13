@@ -13,9 +13,8 @@ class MyDcoument extends Document{
                 <meta property="og:description" content="I am a Chicago photographer, I want to take your photo!" />
                 <meta property="og:image" content="https://moemartinez.com/assets/websitecard.png" />
                 <meta property="og:image:alt" content="I take photos." />
-
 		        <meta name="author" content="Moe Martinez" />
-
+                <a rel="me" href="https://mastodon.social/@sfmoe">Mastodon</a>
                 </Head>
                 <body>
                     <Main />
