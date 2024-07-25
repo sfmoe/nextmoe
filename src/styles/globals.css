@@ -53,16 +53,16 @@ header > label {
 }
 header h1 {
   display: grid;
-  font-size: 65px;
   padding: 0;
   margin: 0;
   overflow: hidden;
   background: url(/assets/MOEMARTINEZ.png);
-  background-position: left bottom;
+  background-position: left top;
   background-repeat: no-repeat;
-  background-size: 100px;
+  background-size: 120px;
   width: 100%;
   margin-right: 20px;
+  height: 87px;
 }
 header h1 a {
   display:flex;
@@ -101,7 +101,7 @@ header h1 a span.subtitle {
 header h1 a span {
     font-size: 20px;
     line-height: 20px;
-    padding-left: 105px;
+    padding-left: 125px;
     letter-spacing: 2px;
   }
 
@@ -115,6 +115,13 @@ header nav#menu {
   display: block;
   max-width: 700px;
 }
+@media screen and (min-width: 600px){
+  header nav#menu{
+    margin-top: -30px;
+    margin-left: 130px;
+  }
+}
+
 header nav#menu ul {
   list-style: none;
   margin: 0;
@@ -270,14 +277,16 @@ header nav#menu ul li a:focus {
     width: 25px;
     z-index: 5;
     color: var(--dark-grey);
+    margin-left: 20px;
+    margin-top: 30px;
   }
   body header input + label span {
     position: absolute;
     width: 100%;
     height: 1.5px;
     top: 35%;
-    margin-top: 25px;
-    left: 20px;
+    margin-top: 0;
+    left: 0;
     display: block;
     background: var(--dark-grey);
     transition: 0.5s;
