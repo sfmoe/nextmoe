@@ -1,48 +1,67 @@
 .homeGallery{
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* .homeGallery .homeCategories::after{
+  content: 'v';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #fff;
+} */
+
+
+.homeGallery a, .homeGallery a:hover, .homeGallery a:active{
+  text-decoration: none;
 }
 .homeCategories{
   position: relative;
-  height:80vh;
+  height:calc(100vH);
   background-size: cover;
-  background-position: center center;
+  background-position: top center;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
 
+
+.homeCategories:first-of-type{
+  height:calc(100vH - 164px);
+}
 .homeCategoryTitle{
   display: block;
   right: 0;
   top: 0;
   font-size: 2rem;
-  width: 30%;
+  width: 100%;
   text-align:center;
-  height: 20%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.8);
-  border: 5px solid #333;
-  border-right: 0;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-weight: bold;
 }
 
 .homeCategories:hover .homeCategoryTitle{
-  background: rgba(0, 0, 0, 0.5);
-  border: 5px solid transparent;
-  color: #fff;
-  font-weight: bold;
+  background: rgba(0, 0, 0, 0.75);
   text-decoration: none;
 }
 
 
 @media screen and (max-width: 800px) {
   .homeCategoryTitle{
-    width: 50%;
-    font-size: 1.5rem;
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
   }
 }
