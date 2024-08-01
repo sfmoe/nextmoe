@@ -380,6 +380,8 @@ button:active,
 }
 .about-page .content .profile-image img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .about-page .content section {
   padding: 1rem;
